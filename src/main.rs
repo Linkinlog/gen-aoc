@@ -1,7 +1,6 @@
 use gen_aoc::cli::Cli;
 use gen_aoc::gen::GoGen;
 
-
 fn main() {
     let args = Cli::new();
     match args.lang() {

@@ -16,6 +16,7 @@ run-release: build-release
 
 lint:
 	cargo clippy
+	cargo fmt
 
 clean:
 	cargo clean

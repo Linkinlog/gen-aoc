@@ -30,9 +30,21 @@ impl GoGen {
         fs::write(format!("day{}/input.txt", self.day), "").unwrap();
         fs::write(format!("day{}/go.mod", self.day), Self::GO_MOD_TEMPLATE).unwrap();
         fs::write(format!("day{}/main.go", self.day), Self::GO_MAIN_TEMPLATE).unwrap();
-        fs::write(format!("day{}/solution.go", self.day), Self::SOLUTION_TEMPLATE).unwrap();
-        fs::write(format!("day{}/solution_test.go", self.day), Self::TEST_TEMPLATE).unwrap();
-        fs::write(format!("day{}/solution_benchmark_test.go", self.day), Self::TEST_BENCHMARK_TEMPLATE).unwrap();
+        fs::write(
+            format!("day{}/solution.go", self.day),
+            Self::SOLUTION_TEMPLATE,
+        )
+        .unwrap();
+        fs::write(
+            format!("day{}/solution_test.go", self.day),
+            Self::TEST_TEMPLATE,
+        )
+        .unwrap();
+        fs::write(
+            format!("day{}/solution_benchmark_test.go", self.day),
+            Self::TEST_BENCHMARK_TEMPLATE,
+        )
+        .unwrap();
         println!("Generated Go for day {}, Happy Hacking!", self.day);
     }
 
@@ -150,5 +162,4 @@ func BenchmarkPart2(b *testing.B) {
 		part2(input)
 	}
 }"#;
-
 }
