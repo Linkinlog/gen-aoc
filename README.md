@@ -1,7 +1,8 @@
 ## Features
 
 Generates a shiny new project folder for your chosen day of AOC madness
-Automates boilerplate code and tests in Go (we're still working on the whole 'multiple languages' thing)
+
+Automates boilerplate code and tests in your language of choice
 
 
 ## Usage (it's so easy, even a reindeer could do it)
@@ -13,7 +14,7 @@ Automates boilerplate code and tests in Go (we're still working on the whole 'mu
 --day: The AOC puzzle you're about to tackle
 ```
 ```bash
---lang: Currently only supports go
+--lang: Currently only supports go & rust
 ```
 ```bash
 --fresh: If you want a sparkling clean start, this flag wipes out any existing code

@@ -3,6 +3,7 @@ use clap::Parser;
 #[derive(clap::ValueEnum, Clone, Debug)]
 pub enum Langs {
     Go,
+    Rust,
 }
 
 #[derive(Parser)]
