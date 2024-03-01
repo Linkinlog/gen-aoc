@@ -34,12 +34,10 @@ impl RustGen {
                 }
             }
         }
-        let input =
-            fs::read_to_string("src/templates/rust/input.txt").expect("Error reading input.txt");
-        let cargo_toml =
-            fs::read_to_string("src/templates/rust/Cargo.toml").expect("Error reading Cargo.toml");
-        let main =
-            fs::read_to_string("src/templates/rust/src/main.rs").expect("Error reading main.rs");
+
+        let input = include_str!("templates/rust/input.txt");
+        let cargo_toml = include_str!("templates/rust/Cargo.toml");
+        let main = include_str!("templates/rust/src/main.rs");
 
         fs::write(format!("day{}/input.txt", self.day), input).expect("Error writing input.txt");
         fs::write(format!("day{}/Cargo.toml", self.day), cargo_toml)

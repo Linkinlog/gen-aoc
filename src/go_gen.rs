@@ -29,17 +29,13 @@ impl GoGen {
                 }
             }
         }
-        let input =
-            fs::read_to_string("src/templates/go/input.txt").expect("Error reading input.txt");
-        let go_mod = fs::read_to_string("src/templates/go/go.mod").expect("Error reading go.mod");
-        let go_main =
-            fs::read_to_string("src/templates/go/main.go").expect("Error reading main.go");
-        let solution =
-            fs::read_to_string("src/templates/go/solution.go").expect("Error reading solution.go");
-        let solution_test = fs::read_to_string("src/templates/go/solution_test.go")
-            .expect("Error reading solution_test.go");
-        let solution_benchmark_test = fs::read_to_string("src/templates/go/solution_benchmark.go")
-            .expect("Error reading solution_benchmark.go");
+
+        let input = include_str!("templates/go/input.txt");
+        let go_mod = include_str!("templates/go/go.mod");
+        let go_main = include_str!("templates/go/main.go");
+        let solution = include_str!("templates/go/solution.go");
+        let solution_test = include_str!("templates/go/solution_test.go");
+        let solution_benchmark_test = include_str!("templates/go/solution_benchmark.go");
 
         fs::write(format!("day{}/input.txt", self.day), input).expect("Error writing input.txt");
         fs::write(format!("day{}/go.mod", self.day), go_mod).expect("Error writing go.mod");
