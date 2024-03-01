@@ -1,19 +1,9 @@
 package main
 
-import "strings"
-
-func part1(input string) any {
-	for _, line := range strings.Split(input, "\n") {
-		_ = line
-	}
-
+func part1(input []string) any {
 	return nil
 }
 
-func part2(input string) any {
-	for _, line := range strings.Split(input, "\n") {
-		_ = line
-	}
-
+func part2(input []string) any {
 	return nil
 }

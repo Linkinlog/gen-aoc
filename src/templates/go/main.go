@@ -24,10 +24,10 @@ func main() {
 	fmt.Printf("Running part %d...\n", part)
 
 	if part == 1 {
-		ans := part1(input)
+		ans := part1(strings.Split(input, "\n"))
 		fmt.Println(ans)
 	} else {
-		ans := part2(input)
+		ans := part2(strings.Split(input, "\n"))
 		fmt.Println(ans)
 	}
 }
