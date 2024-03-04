@@ -5,6 +5,7 @@ import (
 	"flag"
 	"fmt"
 	"strings"
+	"time"
 )
 
 //go:embed input.txt
@@ -19,9 +20,10 @@ func init() {
 
 func main() {
 	var part int
-	flag.IntVar(&part, "part", 1, "part 1 or 2")
+	flag.IntVar(&part, "p", 1, "part 1 or 2")
 	flag.Parse()
 	fmt.Printf("Running part %d...\n", part)
+	start := time.Now()
 
 	if part == 1 {
 		ans := part1(strings.Split(input, "\n"))
@@ -30,4 +32,6 @@ func main() {
 		ans := part2(strings.Split(input, "\n"))
 		fmt.Println(ans)
 	}
+
+	fmt.Println("Execution time: ", time.Since(start))
 }
